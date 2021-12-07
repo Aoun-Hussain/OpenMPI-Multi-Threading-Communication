@@ -1,0 +1,17 @@
+#PBS -N job1
+#PBS -q coc-ice 
+#PBS -o job1.output.$PBS_JOBID 
+#PBS -l nodes=8:ppn=2
+#PBS -l walltime=2:00
+
+#PBS -j oe
+#PBS -o main.out
+
+#PBS -m abe
+#PBS -M aoun.hussain@gatech.edu
+
+cd ~/Lab6
+
+echo "Started Lab6 Job..."
+module load gcc mvapich2
+mpirun -np 16 ./a.out -N 10 -I 100
