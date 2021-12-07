@@ -1,21 +1,4 @@
 /*
-Author: Aoun Hussain
-Class: ECE 6122-A
-Last Date Modified: Sun, Dec 5, 2021
-Description: This is the openMPI source file for the solution of Lab 6.
-             Takes 4 arguments -N following number of dimensions and
-             -I following total iterations and executes the laplace
-             equations using jacobian iterations to update the temperature
-             of the square plate. Writes the output temperature coordinates to
-             the csv file and output the total execution time. Uses openMPI and
-             multi-threaded processors for the purpose.
-
-Special Note: The results in the temperature array are rounded off to 10 decimal places, as
-              it was required to do at least 6 on Piazza. It is done for precision!
-              If (N + 2) % 16 != 0, the program terminates with invalid parameters.
-*/
-
-/*
 Compilations Instructions: Use the following command to run:
                             "qsub -q coc-ice -A YOU_USER_NAME -l nodes=8:ppn=2,walltime=02:00:00 -I"
                             Then load appropriate modules by: module load gcc mvapich2
