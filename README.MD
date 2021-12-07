@@ -1,0 +1,2 @@
+This is the openMPI source file. Takes 4 arguments -N following number of dimensions and -I following total iterations and executes the Laplace equations using jacobian iterations to update the temperature of the square plate. Writes the output temperature coordinates to the csv file and output the total execution time. Uses openMPI and
+multi-threaded processors for the purpose.
